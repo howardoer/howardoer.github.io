@@ -24,6 +24,22 @@ body {
   overflow: hidden;
 }
 
+blockquote {
+  margin: 1.5em 0px;
+  font-size: inherit;
+  color: rgb(124, 135, 156);
+  border-color: rgb(75, 83, 98);
+  border-width: 4px;
+}
+blockquote {
+  padding: 0px 15px;
+  color: rgb(119, 119, 119);
+  border-left-width: 4px;
+  border-left-style:
+  solid;
+  border-left-color: rgb(221, 221, 221); }
+}
+
 a {
   color: #8085C1;
   text-decoration: none;
