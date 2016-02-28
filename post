@@ -4,7 +4,7 @@ require 'optparse'
 class BlogPoster
   def initialize()
     @title=nil
-    @cover=nil
+    @cover='cover.jpg'
     @categories=nil
 	end
 
@@ -35,8 +35,8 @@ class BlogPoster
       @categories = 'unsorted'
     end
 
-    full_date = Time.new.strftime("%Y-%m-%d %H:%M:%S")
-    short_date = Time.new.strftime("%Y-%m-%d")
+    full_date = (Time.now - 12*60*60).strftime("%Y-%m-%d %H:%M:%S")
+    short_date = (Time.now - 12*60*60).strftime("%Y-%m-%d")
     post_name = "#{short_date}-#{@title.gsub(/\s/, '-')}.md"
 
     File.open("./_posts/#{post_name}", 'w') do |f|
